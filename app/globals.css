@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Crimson Text', serif;
+    line-height: 1.7;
+    color: #44403C;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #292524;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-4 rounded-full font-medium font-inter transition-all duration-300 hover:bg-primary-dark hover:shadow-lg transform hover:-translate-y-1;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-8 py-4 rounded-full font-medium font-inter transition-all duration-300 hover:bg-secondary-dark hover:shadow-lg transform hover:-translate-y-1;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-8 py-4 rounded-full font-medium font-inter transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg transform hover:-translate-y-1;
+  }
+  
+  .btn-elegant {
+    @apply bg-cream-100 text-primary px-8 py-4 rounded-full font-medium font-inter transition-all duration-300 hover:bg-cream-200 hover:shadow-lg transform hover:-translate-y-1 border border-cream-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-3xl shadow-soft p-8 transition-all duration-500 hover:shadow-medium hover:transform hover:-translate-y-2 border border-cream-100;
+  }
+  
+  .card-elegant {
+    @apply bg-cream-50 rounded-3xl shadow-soft p-8 transition-all duration-500 hover:shadow-medium hover:transform hover:-translate-y-2 border border-cream-200;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #FDF6F0 0%, #FAEBD7 50%, #F5DEB3 100%);
+  }
+  
+  .gradient-warm {
+    background: linear-gradient(135deg, #FFFEF7 0%, #FEFCF0 50%, #FDF8E8 100%);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #654321 0%, #B8860B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .artisan-border {
+    position: relative;
+  }
+  
+  .artisan-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #8B4513, #D2691E, #FF6B6B, #D2691E, #8B4513);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  
+  .flourish {
+    position: relative;
+  }
+  
+  .flourish::after {
+    content: '❦';
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    color: #D2691E;
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+}
+
+
